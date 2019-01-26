@@ -10,8 +10,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { MatListModule, MatIconModule, MatInputModule, MatButtonModule, MatCardModule } from '@angular/material';
+import { MatListModule, MatIconModule, MatInputModule, MatButtonModule, MatCardModule, MatDividerModule } from '@angular/material';
 import { EmailComponent } from './components/contact/email/email.component';
+import { GithubComponent } from './components/contact/github/github.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EmailComponent } from './components/contact/email/email.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    EmailComponent
+    EmailComponent,
+    GithubComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { EmailComponent } from './components/contact/email/email.component';
     MatIconModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
