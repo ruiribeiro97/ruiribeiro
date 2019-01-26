@@ -10,7 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { MatListModule, MatIconModule, MatInputModule, MatButtonModule } from '@angular/material';
+import { MatListModule, MatIconModule, MatInputModule, MatButtonModule, MatCardModule } from '@angular/material';
+import { EmailComponent } from './components/contact/email/email.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MatListModule, MatIconModule, MatInputModule, MatButtonModule } from '@
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { MatListModule, MatIconModule, MatInputModule, MatButtonModule } from '@
     MatListModule,
     MatIconModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
