@@ -1,41 +1,48 @@
 <mat-card fxFlex>
-    <mat-card-header>
-      <mat-card-title>Email</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <!-- form goes here -->
-      <form (ngSubmit)="processForm()">
-        <section>
-          <!-- name -->
-          <mat-form-field>
-            <input matInput type="text" name="name" placeholder="Seu nome" [(ngModel)]="name" required minlength="3"
-              #nameInput="ngModel">
-            <mat-error *ngIf="nameInput.invalid && nameInput.dirty">
-              De certeza que o seu nome tem menos de 3 caracteres?
-            </mat-error>
-          </mat-form-field>
-        </section>
-        <section>
-          <!-- email -->
-          <mat-form-field>
-            <input matInput type="email" name="email" placeholder="Seu email" [(ngModel)]="email" required email
-              #emailInput="ngModel">
-            <mat-error *ngIf="emailInput.invalid && emailInput.dirty">
-              Falta qualquer coisa no email?
-            </mat-error>
-          </mat-form-field>
-        </section>
-        <section>
-          <!-- message -->
-          <mat-form-field>
-            <textarea matInput name="message" placeholder="Mensagem" [(ngModel)]="message" required
-              #messageInput="ngModel"></textarea>
-            <mat-error *ngIf="emailInput.invalid && emailInput.dirty">
-              Não tem palavras? Eu entendo.
-            </mat-error>
-          </mat-form-field>
-        </section>
-        <button mat-raised-button type="submit">Enviar</button>
-      </form>
-    </mat-card-content>
-  </mat-card>
+  <mat-card-header>
+    <mat-card-title>Email</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <!-- form goes here -->
+    <form (ngSubmit)="processForm()">
+      <section>
+        <!-- name -->
+        <mat-form-field>
+          <input matInput type="text" name="name" placeholder="Nome" [(ngModel)]="name" required minlength="3"
+            #nameInput="ngModel">
+          <mat-error *ngIf="nameInput.invalid && nameInput.dirty">
+            De certeza que o seu nome tem menos de 3 caracteres?
+          </mat-error>
+        </mat-form-field>
+      </section>
+      <section>
+        <!-- email -->
+        <mat-form-field>
+          <input matInput type="email" name="email" placeholder="Email" [(ngModel)]="email" required email #emailInput="ngModel">
+          <mat-error *ngIf="emailInput.invalid && emailInput.dirty">
+            Falta qualquer coisa no email?
+          </mat-error>
+        </mat-form-field>
+      </section>
+      <section>
+        <!-- subject -->
+        <mat-form-field>
+          <input matInput name="subject" placeholder="Assunto" [(ngModel)]="subject" required #subjectInput="ngModel">
+          <mat-error *ngIf="subjectInput.invalid && subjectInput.dirty">
+            Preciso de saber o assunto
+          </mat-error>
+        </mat-form-field>
+      </section>
+      <section>
+        <!-- message -->
+        <mat-form-field>
+          <textarea matInput name="message" placeholder="Mensagem" [(ngModel)]="message" required #messageInput="ngModel"></textarea>
+          <mat-error *ngIf="messageInput.invalid && messageInput.dirty">
+            Não tem palavras? Eu entendo.
+          </mat-error>
+        </mat-form-field>
+      </section>
+      <button mat-raised-button type="submit">Enviar</button>
+    </form>
+  </mat-card-content>
+</mat-card>

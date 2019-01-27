@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -11,12 +11,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { MatListModule, MatIconModule, MatInputModule, MatButtonModule, MatCardModule, MatDividerModule } from '@angular/material';
+import { MatListModule, MatIconModule, MatInputModule, MatButtonModule, MatCardModule, MatDividerModule, MatIconRegistry, MatTableModule, MatFormFieldModule } from '@angular/material';
 import { EmailComponent } from './components/contact/email/email.component';
 import { OthersComponent } from './components/contact/others/others.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { BitbucketService } from './services/bitbucket.service';
 import { GithubService } from './services/github.service';
+import { GithubComponent } from './components/projects/github/github.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { GithubService } from './services/github.service';
     EmailComponent,
     OthersComponent,
     ProjectsComponent,
+    GithubComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,9 +43,15 @@ import { GithubService } from './services/github.service';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule,
+    MatFormFieldModule
   ],
   providers: [BitbucketService, GithubService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg'));
+  }
+}

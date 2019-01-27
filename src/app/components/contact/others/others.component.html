@@ -1,6 +1,17 @@
-<mat-card fxFlex>
-  <mat-card-content>
-    <p>LinkedIn</p>
-    <p>Facebook</p>
-  </mat-card-content>
+<mat-card fxLayout="column" fxLayoutAlign="space-around none">
+  <section>
+    <p>
+      <mat-icon svgIcon="at" class="icon"></mat-icon> ruiribeiro97@gmail.com
+    </p>
+    <!-- <mat-divider></mat-divider> -->
+    <p>
+      <mat-icon class="icon">phone</mat-icon> +351 910838851
+    </p>
+  </section>
+  <!-- <mat-divider></mat-divider> -->
+  <section fxLayout="row" fxLayoutAlign="space-around center">
+    <mat-icon svgIcon="github-circle" class="icon"></mat-icon>
+    <mat-icon svgIcon="facebook" class="icon"></mat-icon>
+    <mat-icon svgIcon="linkedin" class="icon"></mat-icon>
+  </section>
 </mat-card>

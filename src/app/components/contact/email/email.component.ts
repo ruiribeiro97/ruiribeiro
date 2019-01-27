@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EmailComponent implements OnInit {
   name: string;
   email: string;
+  subject: string;
   message: string;
 
   constructor() { }
@@ -16,7 +17,7 @@ export class EmailComponent implements OnInit {
   }
 
   processForm() {
-    const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
+    const allInfo = `My name is ${this.name}. My email is ${this.email}. My subject is ${this.subject}. My message is ${this.message}`;
     alert(allInfo);
   }
 }
