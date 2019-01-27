@@ -1,17 +1,21 @@
 <mat-card fxLayout="column" fxLayoutAlign="space-around none">
   <section>
     <p>
-      <mat-icon svgIcon="at" class="icon"></mat-icon> ruiribeiro97@gmail.com
+      <mat-icon svgIcon="at" class="icon"></mat-icon> | ruiribeiro97@gmail.com
     </p>
-    <!-- <mat-divider></mat-divider> -->
     <p>
-      <mat-icon class="icon">phone</mat-icon> +351 910838851
+      <mat-icon class="icon">phone</mat-icon> | +351 910838851
     </p>
   </section>
-  <!-- <mat-divider></mat-divider> -->
   <section fxLayout="row" fxLayoutAlign="space-around center">
-    <mat-icon svgIcon="github-circle" class="icon"></mat-icon>
-    <mat-icon svgIcon="facebook" class="icon"></mat-icon>
-    <mat-icon svgIcon="linkedin" class="icon"></mat-icon>
+    <button mat-icon-button (click)="githubProfile()">
+      <mat-icon svgIcon="github-circle"></mat-icon>
+    </button>
+    <button mat-icon-button (click)="facebookProfile()">
+      <mat-icon svgIcon="facebook"></mat-icon>
+    </button>
+    <button mat-icon-button (click)="linkedinProfile()">
+      <mat-icon svgIcon="linkedin"></mat-icon>
+    </button>
   </section>
 </mat-card>

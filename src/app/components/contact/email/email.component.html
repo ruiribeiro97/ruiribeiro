@@ -1,6 +1,7 @@
-<mat-card fxFlex>
+<mat-card>
   <mat-card-header>
     <mat-card-title>Email</mat-card-title>
+    <mat-card-subtitle>Não exite em contactar-me em caso de interesse.</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <!-- form goes here -->
@@ -36,7 +37,8 @@
       <section>
         <!-- message -->
         <mat-form-field>
-          <textarea matInput name="message" placeholder="Mensagem" [(ngModel)]="message" required #messageInput="ngModel"></textarea>
+          <textarea matInput matTextareaAutosize matAutosizeMinRows=5 name="message" placeholder="Mensagem" [(ngModel)]="message"
+            required #messageInput="ngModel"></textarea>
           <mat-error *ngIf="messageInput.invalid && messageInput.dirty">
             Não tem palavras? Eu entendo.
           </mat-error>

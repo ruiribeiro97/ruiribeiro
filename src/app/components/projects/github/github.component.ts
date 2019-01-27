@@ -27,9 +27,8 @@ export class GithubComponent implements OnInit {
       if (res) {
         this.dataSource = new MatTableDataSource(res);
       }
-    })
+    });
   }
-
 }
 
 export interface GithubRepository {
