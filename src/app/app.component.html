@@ -1,4 +1,17 @@
 <app-header></app-header>
-<main [@routerTransition]="getState(o)">
-    <router-outlet #o="outlet"></router-outlet>
-</main>
+<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+    <div class="section">
+        <app-home></app-home>
+    </div>
+    <div class="section">
+        <!-- (click)="fullpage_api.moveSectionDown()"-->
+        <app-about></app-about>
+    </div>
+    <div class="section">
+        <app-projects></app-projects>
+    </div>
+    <div class="section">
+        <app-contact></app-contact>
+    </div>
+    <!-- <div class="section" (click)="fullpage_api.moveTo('secondPage', 2)">Some section4</div> -->
+</div>

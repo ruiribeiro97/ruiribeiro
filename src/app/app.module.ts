@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ import { GithubComponent } from './components/projects/github/github.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFullpageModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FlexLayoutModule,

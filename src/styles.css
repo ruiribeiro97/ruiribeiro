@@ -1,7 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~fullpage.js/dist/fullpage.min.css';
+html,
+body {
+    height: 100%;
+    background-color: #b6b6b6
+}
 
-html, body { height: 100%; background-color: #b6b6b6 }
-body { margin: 0; font-family: "Lucida Console", Monaco, monospace }
+body {
+    margin: 0;
+    font-family: "Lucida Console", Monaco, monospace
+}
+
+
 /* Roboto, "Helvetica Neue", sans-serif; */
