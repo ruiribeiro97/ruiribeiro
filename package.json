@@ -28,7 +28,7 @@
     "@fullpage/angular-fullpage": "0.0.12",
     "@mdi/angular-material": "^3.3.92",
     "core-js": "^2.5.4",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "hammerjs": "^2.0.8",
     "npx": "^10.2.0",
     "path": "^0.12.7",
